@@ -1,22 +1,26 @@
 <template>
+  
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <AsideMenu/>
+    <button class="button is-primary">Button</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AsideMenu from './components/AsideMenu.vue'
+// import bulma from './node_modules/bulma/css/bulma.css.css"'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    AsideMenu
   }
 }
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
