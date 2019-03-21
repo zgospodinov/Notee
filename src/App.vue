@@ -10,13 +10,19 @@
         <div style="width:100%;height:100vh;" v-if="showTaskView">
           <TasksView/>
         </div>
+        <div style="width:100%;height:100vh;" v-if="showTeamSettingsView">
+          <TeamView></TeamView>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+
 import AsideMenu from "./components/AsideMenu.vue";
 import TasksView from "./components/TasksView.vue";
+import TeamView from './components/TeamView.vue';
+
 export default {
   name: "app",
   data() {
@@ -28,7 +34,8 @@ export default {
   props: {},
   components: {
     AsideMenu,
-    TasksView
+    TasksView,
+    TeamView
   }
 };
 </script>

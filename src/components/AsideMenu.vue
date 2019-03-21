@@ -7,6 +7,11 @@
           <a class="is-size-7" @click="showTasksView">Tasks</a>
         </li>
       </ul>
+      <ul class="menu-list">
+        <li>
+          <a class="is-size-7" @click="newNote">New task</a>
+        </li>
+      </ul>
       <p class="menu-label">Administration</p>
       <ul class="menu-list">
         <li>
@@ -28,6 +33,9 @@ export default {
     showTeamSettings() {
       this.$parent.showTaskView = false;
       this.$parent.showTeamSettingsView = true;
+    },
+    newNote(){
+      alert('creating new note');
     }
   }
 };
