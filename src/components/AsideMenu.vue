@@ -33,9 +33,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navigation {
-  background-color: rgb(196, 196, 196);
+  background-color:hsla(171, 100%, 41%, 0.363);
   padding: 5px;
   width: 100%;
+  height: 100vh;
 }
 p {
   text-align: left;
@@ -50,7 +51,6 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
   width: 100%;
 }
 a {
