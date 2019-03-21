@@ -7,7 +7,7 @@
         <div class="dashboard">
           <AsideMenu/>
         </div>
-        <div style="width:100%;height:100vh;">
+        <div style="width:100%;height:100vh;" v-if="showTaskView">
           <TasksView/>
         </div>
       </div>
@@ -19,6 +19,13 @@ import AsideMenu from "./components/AsideMenu.vue";
 import TasksView from "./components/TasksView.vue";
 export default {
   name: "app",
+  data() {
+    return {
+      showTaskView: true,
+      showTeamSettingsView: false,
+    };
+  },
+  props: {},
   components: {
     AsideMenu,
     TasksView

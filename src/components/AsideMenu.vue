@@ -22,10 +22,12 @@ export default {
   props: {},
   methods: {
     showTasksView() {
-      alert("task views");
+      this.$parent.showTaskView = true;
+      this.$parent.showTeamSettingsView = false;
     },
     showTeamSettings() {
-      alert("team view settings");
+      this.$parent.showTaskView = false;
+      this.$parent.showTeamSettingsView = true;
     }
   }
 };
