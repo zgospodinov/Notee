@@ -9,14 +9,14 @@
         <span>New member</span>
       </button>
 
-      <table class="table">
+      <table class="table is-fullwidth is-striped is-size-7 team-view-panel__table">
           <thead>
               <tr>
-                  <td>id</td>
-                  <td>Name</td>
-                  <td>Last name</td>
-                  <td>Job</td>
-                  <td>Company</td>
+                  <th>id</th>
+                  <th>Name</th>
+                  <th>Last name</th>
+                  <th>Job</th>
+                  <th>Company</th>
               </tr>
           </thead>
         <tbody>
@@ -63,5 +63,9 @@ export default {
 .panel-view-title {
   margin-bottom: 10px;
   border-bottom: 1px solid;
+}
+
+.team-view-panel__table{
+    margin-top: 10px;
 }
 </style>
