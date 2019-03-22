@@ -1,27 +1,67 @@
 <template>
-    <div class="teak-view-panel is-fullwidth">
-    <h2>Team view panel</h2>
+  <div class="team-view-panel is-fullwidth">
+    <h2 class="panel-view-title has-text-primary is-size-5">Team settings</h2>
+    <div class="container is-desktop">
+      <button class="button is-primary is-small" @click="createMember">
+        <span class="icon">
+          <i class="fas fa-user-plus"></i>
+        </span>
+        <span>New member</span>
+      </button>
+
+      <table class="table">
+          <thead>
+              <tr>
+                  <td>id</td>
+                  <td>Name</td>
+                  <td>Last name</td>
+                  <td>Job</td>
+                  <td>Company</td>
+              </tr>
+          </thead>
+        <tbody>
+          <tr v-for="(member, index) in teamMembers" :key="index">
+            <td>{{member.id}}</td>
+            <td>{{member.firstName}}</td>
+            <td>{{member.lastName}}</td>
+            <td>{{member.job}}</td>
+            <td>{{member.company}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
 <script>
-    export default {
-        name: "TeamView",
-        data(){
-            return {
-
-            }
-        },
-        methods:{
-
-        }
+export default {
+  name: "TeamView",
+  props: {
+    teamMembers: {
+      type: Array,
+      required: true
     }
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    createMember() {
+      alert("creating new user");
+    }
+  }
+};
 </script>
 
 <style scoped>
-.teak-view-panel{
-    background-color: rgba(255, 235, 205, 0.544);
-    width: 100%;
-    height: 100%;
+.team-view-panel {
+  background-color: rgba(255, 235, 205, 0.544);
+  width: 100%;
+  height: 100%;
+}
+
+.panel-view-title {
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
 }
 </style>

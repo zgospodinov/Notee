@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+        crossorigin="anonymous">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <div class="wrapper">
       <h1 class="has-text-primary is-size-3 has-text-weight-semibold">Notee</h1>
@@ -11,7 +15,7 @@
           <TasksView/>
         </div>
         <div style="width:100%;height:100vh;" v-if="showTeamSettingsView">
-          <TeamView></TeamView>
+          <TeamView :team-members="team"></TeamView>
         </div>
       </div>
     </div>
@@ -29,6 +33,11 @@ export default {
     return {
       showTaskView: true,
       showTeamSettingsView: false,
+      team: [
+        {id: 1, firstName: "Zdravko", lastName: "Gospodinov", age: 29, company: "Lindner", job:"Developer"},
+        {id: 2,firstName: "Georgi", lastName: "Bonchev", age: 32, company: "Lindner", job:"Engineer"},
+        {id: 3,firstName: "Gergana", lastName: "Bouklieva", age: 18, company: "Lindner", job:"Engineer"},
+      ]
     };
   },
   props: {},
@@ -55,7 +64,7 @@ export default {
   height: 100%;
 }
 .dashboard {
-  width: 25%;
+  width: 350px;
   float: left;
 }
 </style>
